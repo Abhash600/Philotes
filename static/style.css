@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+#bgimage {
+  background: url(https://wallpapercave.com/wp/wp2533094.jpg);
+  overflow: hidden;
+  background-size: cover;
+}
+#title {
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+#description {
+  font-style: italic;
+  font-size: 1.125rem;
+}
+
+header {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+#survey-form {
+  background-color: rgba(27, 27, 50, 0.6);
+  max-width: 90%;
+  margin: auto;
+  margin-bottom: 1rem;
+  padding: 2rem 1.5rem;
+  position: relative;
+  border-radius: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 0rem;
+}
+
+.fq {
+  color: white;
+  font-size: 1rem;
+  padding: 0.2rem 0;
+}
+
+input {
+  background-color: rgba(27, 27, 50, 0.2);
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  padding: 0.3rem;
+  margin-top: 0.05rem;
+  border: none;
+  outline: 0;
+  color: #00dbde;
+}
+select {
+  background-color: rgba(237, 237, 245, 0.2);
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  padding: 0.3rem;
+  margin-top: 0.05rem;
+  border: none;
+  outline: 0;
+  color: #00dbde;
+}
+input:focus {
+  transition: all 0.4s;
+  box-shadow: 0 0.1rem 0 0 #fc00ff;
+  outline: 0;
+}
+
+select option {
+  background-color: rgba(27, 27, 50, 0.7);
+}
+
+input[type="radio"] {
+  margin: 0 0.5rem 0 0;
+}
+
+input[type="checkbox"] {
+  margin: 0 0.5rem 0 0;
+}
+
+/* ANIMATION */
+
+.box-area {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  list-style: none;
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-evenly;
+}
+
+.box-area li {
+  list-style: none;
+  animation: animated 20s linear infinite;
+}
+
+@keyframes animated {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(-1800px) rotate(360deg);
+  }
+}
+
+.box-area li:nth-child(odd) {
+  left: 26%;
+  font-size: 20px;
+  color: #1a4657;
+}
+
+.box-area li:nth-child(even) {
+  width: 20px;
+  height: 20px;
+  background: #1a4657;
+  border-radius: 50%;
+}
+
+.box-area li:nth-child(1) {
+  animation-delay: 0s;
+  color: #fc00ff;
+}
+
+.box-area li:nth-child(3) {
+  animation-delay: 5s;
+  color: #00dbde;
+}
+
+.box-area li:nth-child(5) {
+  animation-delay: 2s;
+  color: #fc00ff;
+}
+
+.box-area li:nth-child(7) {
+  animation-delay: 4.5s;
+  color: #00dbde;
+}
+
+.box-area li:nth-child(9) {
+  animation-delay: 6s;
+  color: #fc00ff;
+}
+
+.box-area li:nth-child(2) {
+  animation-delay: 10s;
+  color: #00dbde;
+}
+
+.box-area li:nth-child(4) {
+  animation-delay: 15s;
+  color: #fc00ff;
+}
+
+.box-area li:nth-child(6) {
+  animation-delay: 3.8s;
+  color: #00dbde;
+}
+
+.box-area li:nth-child(8) {
+  animation-delay: 16s;
+  color: #fc00ff;
+}
+
+.box-area li:nth-child(10) {
+  animation-delay: 1.2s;
+  color: #00dbde;
+}
+
+/* BUTTON */
+
+.btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s;
+  border-radius: 3rem;
+}
+
+.btn1 .inner {
+  background: -webkit-linear-gradient(
+    right,
+    #00dbde,
+    #fc00ff,
+    #00dbde,
+    #fc00ff
+  );
+}
+
+.btn .inner {
+  position: absolute;
+  width: 300%;
+  height: 100%;
+  left: -100%;
+  z-index: 3;
+  transition: all 0.4s;
+}
+
+.btn button {
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0.7rem;
+  font-style: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  z-index: 4;
+}
+
+.btn:hover {
+  transform: scale(1.03);
+}
+
+.btn:hover .inner {
+  left: 0;
+}
+
+@media (min-width: 540px) {
+  #survey-form {
+    max-width: 80%;
+    margin: auto;
+    margin-bottom: 1rem;
+    padding: 2rem 3.5rem;
+    position: relative;
+    border-radius: 1.5rem;
+  }
+}
